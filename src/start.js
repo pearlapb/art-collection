@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory} from 'react-router';
 
-function HelloWorld() {
-    return (
-        <div>Hello world!</div>
-    )
-}
+import App from './components/App.js'
+
+const router = (
+    <Router history={browserHistory}>
+        <Route path='/' component={App}>
+            <IndexRoute component={App}/>
+        </Route>
+    </Router>
+)
 
 ReactDOM.render(
-    <HelloWorld />,
+    router,
     document.getElementById('main')
 );

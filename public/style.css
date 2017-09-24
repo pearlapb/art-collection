@@ -1,0 +1,57 @@
+* {
+    font-family: 'Cutive Mono', monospace;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 20px auto 20px;
+}
+
+/*==== MENU ====*/
+
+#menu {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    color: #f19ad9;
+    padding: 10px;
+}
+
+.menu-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*==== SEARCH BAR ====*/
+
+#search-bar {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #FFF;
+    box-shadow: none;
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+}
+
+#search-bar:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #ffff00
+}
+
+#search-bar::placeholder {
+    color: #FFF;
+    text-align: center;
+}
